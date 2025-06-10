@@ -1,0 +1,172 @@
+/* Set black background and light text for the whole container */
+.skips-container {
+  padding: 2rem;
+  margin: 0 auto;
+  background-color: #000000;
+  min-height: 100vh;
+  color: #f0f0f0;
+  /* light text for contrast */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page title styling */
+.page-title {
+  text-align: center;
+  /* gold/yellow */
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 0 0 6px #ffd700aa;
+}
+
+/* Grid for cards */
+.skips-grid {
+  display: flex;
+  gap: 1.5rem;
+  /* fixed gap unit */
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+/* Card styling */
+.skip-card {
+  /* dark card background */
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+  /* subtle yellow shadow */
+  transition: transform 0.3s ease;
+
+  width: 45%;
+
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.skip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 215, 0, 0.5);
+}
+
+/* Image styling */
+.card-image img {
+  width: 96%;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #ffd700aa;
+}
+
+
+/* Title */
+.card-title {
+  font-size: 1.5rem;
+  text-align: end;
+  font-weight: 700;
+}
+
+.color {
+  color: #ffd700;
+
+}
+
+/* Price */
+.card-price {
+  text-align: end;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px #ffea00aa;
+}
+
+/* Details */
+.card-details {
+  color: #cccccc;
+  font-size: 1rem;
+}
+
+/* Select button with yellow gradient */
+.select-button {
+  width: 100%;
+  padding: 0.5rem;
+  background: linear-gradient(90deg, #f9d423 0%, #ff4e50 100%);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px #ffb347aa;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.select-button:hover {
+  background: linear-gradient(90deg, #ffea00 0%, #ffb347 100%);
+  color: #111;
+  box-shadow: 0 6px 15px #ffb347cc;
+}
+
+/* Loading and error messages */
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: #e74c3c;
+}
+
+.forbidden-warning {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 12px;
+  padding: 0.4rem;
+  font-size: 0.75rem;
+  max-width: fit-content;
+}
+
+.days {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+  .skip-card {
+    width: 90% !important;
+    /* Make cards take most of the screen width */
+    padding: 1rem 1.5rem;
+    /* Add some horizontal padding */
+  }
+
+  .flex {
+    flex-direction: column;
+    /* Stack image and content vertically */
+    align-items: center;
+    /* Center align items */
+  }
+
+  .card-image img {
+    width: 100% !important;
+    /* Image fills the card width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-bottom: 1rem;
+    /* Space below the image */
+  }
+
+  .card-content {
+    width: 100%;
+    text-align: center;
+    /* Center text for better mobile readability */
+  }
+
+  .card-title,
+  .card-price {
+    text-align: center !important;
+  }
+}
